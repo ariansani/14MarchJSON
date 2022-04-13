@@ -18,34 +18,9 @@ import vtttp2022.ssf.MarchJSON.services.QuoteService;
 @SpringBootTest
 class ApplicationTests {
 
-	@Autowired
-	private QuoteService quoteSvc;
-
-	@Autowired
-	private QuoteRestController quoteRestCtrl;
-	
-	@Autowired
-	private MockMvc mockMvc;
 
 	@Test
 	void contextLoads() {
-	Assertions.assertNotNull(quoteSvc);
-	}
-
-	@Test
-	public void quoteRestCtrlShouldNotBeNull(){
-		
-		Assertions.assertNotNull(quoteRestCtrl);
-		
-		// MockHttpServletRequestBuilder req = new MockHttpServletRequestBuilder();
-		// mockMvc.perform(requestBuilder);
-	}
-
-	@Test
-	public void getQuotesShouldBeEqual(){
-	int count = 4;
-	Collection<String> result = quoteSvc.getQuotes(count);
-	Assertions.assertEquals(count,result.size(),"getQuotes does not return the expected count");
 	}
 
 
